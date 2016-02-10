@@ -1,0 +1,29 @@
+{
+"StoryName":"Berry and Leo",
+"NrScenes":2,
+"Scenes":[
+{
+	"SceneID":1,
+	"SceneName":"Intro",
+	"SceneDescription":"to be used in tablet app",
+	"SceneActions":[
+		{"actor":1, "expression":"speak", "sound":"story1/I-1-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"story1/I-2-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"story1/I-3-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"story1/I-4-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"story1/I-5-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"story1/I-6-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"story1/I-7-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"story1/I-8-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"story1/I-9-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"story1/I-10-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"story1/I-11-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"story1/I-12-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"story1/I-13-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"story1/I-14-R2.wav", "pause":0}
+	],
+	"NextScenes":[99]
+}
+]
+}
+

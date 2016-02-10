@@ -1,0 +1,16 @@
+C:\Users\iolanda\Desktop\Kinect2Disengagement\bin\x86\Debug\BodyBasics-WPF.exe.config
+C:\Users\iolanda\Desktop\Kinect2Disengagement\bin\x86\Debug\BodyBasics-WPF.exe
+C:\Users\iolanda\Desktop\Kinect2Disengagement\bin\x86\Debug\BodyBasics-WPF.pdb
+C:\Users\iolanda\Desktop\Kinect2Disengagement\bin\x86\Debug\Microsoft.Kinect.Face.dll
+C:\Users\iolanda\Desktop\Kinect2Disengagement\bin\x86\Debug\WebSocket4Net.dll
+C:\Users\iolanda\Desktop\Kinect2Disengagement\bin\x86\Debug\Microsoft.Kinect.Face.xml
+C:\Users\iolanda\Desktop\Kinect2Disengagement\obj\x86\Debug\MainWindow.baml
+C:\Users\iolanda\Desktop\Kinect2Disengagement\obj\x86\Debug\MainWindow.g.cs
+C:\Users\iolanda\Desktop\Kinect2Disengagement\obj\x86\Debug\App.g.cs
+C:\Users\iolanda\Desktop\Kinect2Disengagement\obj\x86\Debug\BodyBasics-WPF_MarkupCompile.cache
+C:\Users\iolanda\Desktop\Kinect2Disengagement\obj\x86\Debug\BodyBasics-WPF.g.resources
+C:\Users\iolanda\Desktop\Kinect2Disengagement\obj\x86\Debug\Microsoft.Samples.Kinect.BodyBasics.Properties.Resources.resources
+C:\Users\iolanda\Desktop\Kinect2Disengagement\obj\x86\Debug\kinect-disengagement.csproj.GenerateResource.Cache
+C:\Users\iolanda\Desktop\Kinect2Disengagement\obj\x86\Debug\BodyBasics-WPF.exe
+C:\Users\iolanda\Desktop\Kinect2Disengagement\obj\x86\Debug\BodyBasics-WPF.pdb
+C:\Users\iolanda\Desktop\Kinect2Disengagement\obj\x86\Debug\kinect-disengagement.csprojResolveAssemblyReference.cache

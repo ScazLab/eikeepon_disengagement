@@ -1,0 +1,368 @@
+﻿using Microsoft.Kinect;
+using Microsoft.Kinect.Face;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Timers;
+using WebSocket4Net;
+
+namespace Microsoft.Samples.Kinect.BodyBasics
+{
+    /// <summary>
+    /// Struct to store engagement information of each person
+    /// Will have an array of engagement structs for everybody detected
+    /// Sum up the float values, then will divide by frame rate to get averages before sending
+    /// </summary>
+    public struct engagement
+    {
+        public float lookingAway;
+        public float happy;
+        public float engaged;
+        public float leanx;
+        public float leany;
+        public float posx; //x coordinate of head on display (capped for depth) 
+        public float sound;
+        public float Z;  // NEW: Z coordinate of head on display  (for selecting the closest N bodies)
+        public float pitch; //NEW: to extract look up and down
+
+        //Number of frames (increase as a new face/body/sound results is received, resets when data is sent)
+        public int facecount;
+        public int bodycount;
+        public int soundcount;
+    }
+
+    enum Position { Left, Middle, Right };
+
+
+    public class EngagementFeatures
+    {
+        /// <summary>
+        /// array of engagement values for each person being tracked
+        /// </summary>
+        public engagement[] Features;
+        private int bodyCount;
+        
+        // number of kids that we are suposed to track
+        const int MAXKIDS = 3;
+
+        // number of milizeconds 
+        const int TIMESTAMP = 500;
+
+        // thresholds for binary feature generation
+        const double BINARY_ENG = 0.5;
+        const double BINARY_SMILE = 0.001;
+        const double BINARY_LOOKAWAY = 0.5;
+        const double BINARY_LEANFORWARD = 0.2;
+        const double BINARY_LEANBACKWARD = -0.2;
+        const double BINATY_LOOKUP = 15;
+        const double BINARY_DOWN = -15;
+
+        /// <summary>
+        /// Face rotation display angle increment in degrees
+        /// </summary>
+        private const double FaceRotationIncrementInDegrees = 5.0;
+
+        private AsynchronousClient sender;
+
+        public EngagementFeatures(int bodyCount)
+        {
+            this.bodyCount = bodyCount;
+            Features = new engagement[bodyCount];
+            this.setFeaturesToZero();
+
+            sender = new AsynchronousClient();
+
+            // Create a timer to send/refresh engagement data every N seconds
+            Timer myTimer = new System.Timers.Timer();
+            // Tell the timer what to do when it elapses
+            myTimer.Elapsed += new ElapsedEventHandler(onTimer);
+            // Set it to go off every second
+            myTimer.Interval = 500;//1000;
+            // And start it        
+            myTimer.Enabled = true;
+        }
+
+        /// <summary>
+        /// Initialize features engagement array engage, or reset all variables in it to 0
+        /// </summary>
+        private void setFeaturesToZero()
+        {
+            for (int i = 0; i < this.bodyCount; i++)
+            {
+                Features[i].happy = 0;
+                Features[i].engaged = 0;
+                Features[i].lookingAway = 0;
+                Features[i].leanx = 0;
+                Features[i].leany = 0;
+                Features[i].sound = 0;
+                Features[i].bodycount = 0;
+                Features[i].soundcount = 0;
+                Features[i].facecount = 0;
+                Features[i].Z = 99; //if not updated, this will be the furthest body
+                Features[i].pitch = 0;
+            }
+        }
+
+        private void printFeatureValues(engagement features, int partID)
+        {
+            Console.WriteLine("Part: " + partID +
+                "\t engaged: " + features.engaged + 
+                "\t smile:" + features.happy + 
+                "\t looking away:" + features.lookingAway + 
+                "\t leanY:" + features.leany + 
+                "\t talking: " + features.sound +
+                "\t pitch: " + features.pitch + 
+                "\t Z: " + features.Z);
+        }
+
+        /// <summary>
+        /// ongoing: creates a list with only the active bodies; sort by Z, select the first three.
+        /// In the final three bodies, sort by X so that we always have each body the same order 
+        /// 
+        /// </summary>
+        private engagement[] getTop3Bodies(engagement[] features, int nTotalBodies)
+        {
+            Console.WriteLine("in top 3 bodies");
+            engagement[] top3Bodies = new engagement[MAXKIDS];
+            List<engagement> eligibleBodies = new List<engagement>();
+
+            List<engagement> toOrder = new List<engagement>(); 
+
+            for (int i = 0; i < this.bodyCount; i++)
+            {
+                toOrder.Add(features[i]);
+                //create a list with all eligible bodies (body and face count larger than 1)
+                if (features[i].facecount > 2 && features[i].bodycount > 2)
+                {
+                    eligibleBodies.Add(features[i]);
+                }
+            }
+
+            List<engagement> orderedList = toOrder.OrderBy(x => x.Z).ToList();
+
+            for (int i = 0; i < orderedList.Count; i++)
+            {
+                printFeatureValues(orderedList[i], i);
+            }
+
+           //if more than 3, select the closest 3. if less, return
+           // if (eligibleBodies.Count > MAXKIDS) 
+            //{
+              //  Console.WriteLine("more than 3 bodies, selecting the 3 closest ones");
+
+              /* for (int i = 0; i < eligibleBodies.Count; i++)
+			    {
+                    printFeatureValues(eligibleBodies[i], i);
+			 
+			    }*/
+         //   }
+
+            return top3Bodies;
+        }
+
+        private engagement[] toBinaryFeatures(engagement[] nonBinaryFeats, int nTotalBodies)
+        {
+            engagement[] binaryFeats = new engagement[nTotalBodies];
+
+            for (int i = 0; i < nTotalBodies; i++)
+            {
+                // (kinect engagement value, for debug and test purposes (not a binary feat for the model)
+              //  nonBinaryFeats[i].engaged > 0.5
+
+                // TALKING
+
+                // SMILING
+
+                // LEAN BACK/FORWARD
+
+                // LOOK UP/DOWN
+
+                // LOOK AT ROBOTS
+            }
+
+            return binaryFeats;
+        }
+
+        /// <summary>
+        /// Called every N miliseconds. Creates an engagement array of average engagement values in the past second
+        /// Resets engage array to 0 for collecting data in the next second
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="e"></param>
+        private void onTimer(object source, ElapsedEventArgs e)
+        {
+            engagement[] averages = new engagement[this.bodyCount];
+
+            for (int i = 0; i < this.bodyCount; i++)
+            {
+                averages[i].facecount = Features[i].facecount;
+                averages[i].bodycount = Features[i].bodycount;
+                averages[i].soundcount = Features[i].soundcount;
+
+                averages[i].Z = Features[i].Z;
+
+                if (Features[i].facecount != 0)
+                {
+                    averages[i].happy = Features[i].happy / Features[i].facecount;
+                    averages[i].engaged = Features[i].engaged / Features[i].facecount;
+                    averages[i].lookingAway = Features[i].lookingAway / Features[i].facecount;
+                    averages[i].pitch = Features[i].pitch / Features[i].facecount;
+                }
+                else
+                {
+                    averages[i].happy = -1;
+                    averages[i].engaged = -1;
+                    averages[i].lookingAway = -1;
+                }
+
+                if (Features[i].bodycount != 0)
+                {
+                    averages[i].leanx = Features[i].leanx / Features[i].bodycount;
+                    averages[i].leany = Features[i].leany / Features[i].bodycount;
+                    averages[i].posx = Features[i].posx; // / Features[i].bodycount;
+                }
+                else
+                {
+                    averages[i].leanx = -1; //should still check if bodycount is 0, because -1 is within range of lean values
+                    averages[i].leany = -1;
+                    averages[i].posx = -1;
+                }
+                averages[i].sound = Features[i].sound;
+               /* if (Features[i].soundcount != 0)
+                {
+                    // put feature as 1 if there is any sound coming from that person
+                    if (Features[i].sound > 0)
+                        averages[i].sound = 1;
+                  //  else
+                  //      averages[i].sound = Features[i].sound;
+                    //averages[i].sound = Features[i].sound / Features[i].soundcount;
+                }
+                else
+                {
+                    averages[i].sound = -1;
+                }*/
+            }
+
+            // getTop3Bodies(averages, this.bodyCount);
+            //Console.WriteLine(i + " Body:" + Features[i].bodycount + ", Face: " + Features[i].facecount + ", Sound: " + Features[i].soundcount + 
+            // " SOUND: " + averages[i].sound);
+            // + averages[i].posx + " Z: " + Features[i].Z);
+
+            for (int i = 0; i < this.bodyCount; i++)
+			{
+                //just to print only the tracked bodies
+                if (Features[i].bodycount > 0)
+                    printFeatureValues(averages[i], i);
+			}
+
+            this.setFeaturesToZero();
+
+            engagement [] binaryFeats = this.toBinaryFeatures(averages, bodyCount);  //change to MAXKIDS later!
+
+            String stringOut = serializeEngagement(binaryFeats);
+            if (sender.ConnectionEstablished)
+            {
+                //Console.WriteLine("sending: " + stringOut);
+                sender.Send(stringOut);
+            }
+            else
+            {
+                Console.WriteLine("socket no longer connected!");
+            }
+
+        }
+
+        private void updateValues()
+        {
+            throw new NotImplementedException();
+        }
+
+
+        /// <summary>
+        /// Convert an engagement array into a string/json to be sent through rosbridge
+        /// TO BE CHANGED
+        /// 
+        /// {
+        ///  "data": [
+        ///      {"part": 0, "happy": "yes/no"},
+        ///      {"part": 1, "happy": "yes/no"},
+        ///      {"part": 2, "happy": "yes/no"}
+        ///   ]
+        ///   }
+        ///   
+        /// talking0:happ0:leanForward0:leanBack0:lookUp0:lookDown0:lookRobots0;talking1:happ1:leanForward1:leanBack1:lookUp1:lookDown1:lookRobots1;talking2 ...
+        /// 
+        /// </summary>
+        /// <returns> serialized String </returns>
+        public string serializeEngagement(engagement[] averages)
+        {
+            string outputData = "{\"data\":[";
+
+            for (int i = 0; i < averages.Length; i++)
+            {
+                outputData += "{\"part\":" + i + ", \"leanY\":" + averages[0].leany.ToString() + "}" ;
+            }
+
+            return outputData;
+        }
+
+        /// <summary>
+        /// Converts rotation quaternion to Euler angles 
+        /// And then maps them to a specified range of values to control the refresh rate
+        /// </summary>
+        /// <param name="rotQuaternion">face rotation quaternion</param>
+        /// <param name="pitch">rotation about the X-axis</param>
+        /// <param name="yaw">rotation about the Y-axis</param>
+        /// <param name="roll">rotation about the Z-axis</param>
+        private int getPitchRotationInDegrees(Vector4 rotQuaternion)
+        {
+            double x = rotQuaternion.X;
+            double y = rotQuaternion.Y;
+            double z = rotQuaternion.Z;
+            double w = rotQuaternion.W;
+
+            // convert face rotation quaternion to Euler angles in degrees
+            //double yawD, pitchD, rollD;
+            double pitchD = Math.Atan2(2 * ((y * z) + (w * x)), (w * w) - (x * x) - (y * y) + (z * z)) / Math.PI * 180.0;
+           // yawD = Math.Asin(2 * ((w * y) - (x * z))) / Math.PI * 180.0;
+            //rollD = Math.Atan2(2 * ((x * y) + (w * z)), (w * w) + (x * x) - (y * y) - (z * z)) / Math.PI * 180.0;
+
+            // clamp the values to a multiple of the specified increment to control the refresh rate
+            double increment = FaceRotationIncrementInDegrees;
+            int pitch = (int)(Math.Floor((pitchD + ((increment / 2.0) * (pitchD > 0 ? 1.0 : -1.0))) / increment) * increment);
+            //yaw = (int)(Math.Floor((yawD + ((increment / 2.0) * (yawD > 0 ? 1.0 : -1.0))) / increment) * increment);
+            //roll = (int)(Math.Floor((rollD + ((increment / 2.0) * (rollD > 0 ? 1.0 : -1.0))) / increment) * increment);
+
+            return pitch;
+        }
+
+        internal void updateEngagementFace(int index, Microsoft.Kinect.Face.FaceFrameResult faceFrameResult)
+        {
+            this.Features[index].facecount++;
+            // detection: 3-yes 2-maybe 1-no 0-unknown 
+            // currently adding 1 to engagement value if kinect detection says yes. Otherwise add 0.
+            this.Features[index].engaged += Convert.ToSingle(faceFrameResult.FaceProperties[FaceProperty.Engaged].Equals(DetectionResult.Yes));
+            this.Features[index].happy += Convert.ToSingle(faceFrameResult.FaceProperties[FaceProperty.Happy].Equals(DetectionResult.Yes));
+            this.Features[index].lookingAway += Convert.ToSingle(faceFrameResult.FaceProperties[FaceProperty.LookingAway].Equals(DetectionResult.Yes));
+
+            this.Features[index].pitch +=  Convert.ToSingle(getPitchRotationInDegrees(faceFrameResult.FaceRotationQuaternion));
+        }
+
+        internal void updateEngagementSound(int index, float SUM)
+        {
+            this.Features[index].sound += SUM;
+            this.Features[index].soundcount++;
+        }
+
+        internal void updateEngagementBody(int index, float x, float y)
+        {
+            this.Features[index].leanx += x;
+            this.Features[index].leany += y;
+            this.Features[index].bodycount++;
+        }
+    }
+
+
+}

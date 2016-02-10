@@ -1,0 +1,127 @@
+{
+"StoryName":"Berry and Leo",
+"NrScenes":4,
+"Scenes":[
+{
+	"SceneID":1,
+	"SceneName":"Intro",
+	"SceneDescription":"to be used in tablet app",
+	"SceneActions":[
+		{"actor":1, "expression":"pan", "sound":150, "pause":0.5, "restart":0},
+		{"actor":2, "expression":"pan", "sound":30, "pause":0.5, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"script-included/I-1-R1.wav", "pause":0, "restart":1},
+		{"actor":2, "expression":"speak", "sound":"script-included/I-2-R2.wav", "pause":0, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"script-included/I-3-R1.wav", "pause":0, "restart":1},
+		{"actor":2, "expression":"speak", "sound":"script-included/I-4-R2.wav", "pause":0, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"script-included/I-5-R1.wav", "pause":0, "restart":1},
+		{"actor":2, "expression":"speak", "sound":"script-included/I-6-R2.wav", "pause":0, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"script-included/I-7-R1.wav", "pause":0, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"script-included/I-8-R2.wav", "pause":0, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"script-included/I-9-R1.wav", "pause":0, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"script-included/I-10-R2.wav", "pause":0, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"script-included/I-11-R1.wav", "pause":0, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"script-included/I-12-R2.wav", "pause":0, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"script-included/I-13-R1.wav", "pause":0, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"script-included/I-14-R2.wav", "pause":0, "restart":0},
+		{"actor":1, "expression":"pan", "sound":80, "pause":0.5, "restart":0},
+		{"actor":2, "expression":"pan", "sound":90, "pause":0.5, "restart":0}
+	],
+	"NextScenes":[2,3,4]
+},
+{
+	"SceneID":2,
+	"SceneName":"choiceA",
+	"SceneDescription":"to be used in tablet app",
+	"SceneActions":[
+		{"actor":1, "expression":"pan", "sound":150, "pause":0.5, "restart":0},
+		{"actor":2, "expression":"pan", "sound":30, "pause":0.5, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"script-included/A-1-R1.wav", "pause":0, "restart":1},
+		{"actor":2, "expression":"speak", "sound":"script-included/A-2-R2.wav", "pause":0, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"script-included/A-3-R1.wav", "pause":0, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"script-included/A-4-R2.wav", "pause":0, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"script-included/A-5-R1.wav", "pause":0, "restart":1},
+		{"actor":2, "expression":"speak", "sound":"script-included/A-6-R2.wav", "pause":0, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"script-included/A-7-R1.wav", "pause":0, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"script-included/A-8-R2.wav", "pause":0, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"script-included/A-9-R1.wav", "pause":0, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"script-included/A-10-R2.wav", "pause":0, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"script-included/A-11-R1.wav", "pause":0, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"script-included/A-12-R2.wav", "pause":0, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"script-included/A-13-R1.wav", "pause":0, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"script-included/A-14-R2.wav", "pause":0, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"script-included/A-15-R1.wav", "pause":0, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"script-included/A-16-R2.wav", "pause":0, "restart":0},
+		{"actor":1, "expression":"pan", "sound":80, "pause":0.5, "restart":0},
+		{"actor":2, "expression":"pan", "sound":90, "pause":0.5, "restart":0}
+	],
+	"NextScenes":[99]
+},
+{
+	"SceneID":3,
+	"SceneName":"choiceB",
+	"SceneDescription":"to be used in tablet app",
+	"SceneActions":[
+		{"actor":1, "expression":"pan", "sound":150, "pause":0.5, "restart":0},
+		{"actor":2, "expression":"pan", "sound":30, "pause":0.5, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"script-included/B-1-R1.wav", "pause":0, "restart":1},
+		{"actor":2, "expression":"speak", "sound":"script-included/B-2-R2.wav", "pause":0, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"script-included/B-3-R1.wav", "pause":0, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"script-included/B-4-R2.wav", "pause":0, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"script-included/B-5-R1.wav", "pause":1, "restart":1},
+		{"actor":1, "expression":"speak", "sound":"script-included/B-6-R1.wav", "pause":2, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"script-included/B-7-R1.wav", "pause":1, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"script-included/B-8-R1.wav", "pause":0, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"script-included/B-9-R2.wav", "pause":0, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"script-included/B-10-R1.wav", "pause":0, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"script-included/B-11-R2.wav", "pause":0, "restart":0},
+		{"actor":1, "expression":"pan", "sound":80, "pause":0.5, "restart":0},
+		{"actor":2, "expression":"pan", "sound":90, "pause":0.5, "restart":0}
+	],
+	"NextScenes":[99]
+},
+{
+	"SceneID":99,
+	"SceneName":"Final Scene",
+	"SceneDescription":"final scene ID should always be 99!",
+	"SceneActions":[
+		{"actor":"1", "expression":"happy", "sound":"intro.wav", "pause":"0", "restart":"0"}
+	],
+	"NextScenes":[99]
+},
+{
+	"SceneID":4,
+	"SceneName":"choiceC",
+	"SceneDescription":"to be used in tablet app",
+	"SceneActions":[
+		{"actor":1, "expression":"pan", "sound":150, "pause":0.5, "restart":1},
+		{"actor":2, "expression":"pan", "sound":30, "pause":0.5, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"script-included/C-1-R1.wav", "pause":0, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"script-included/C-2-R2.wav", "pause":0, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"script-included/C-3-R1.wav", "pause":0, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"script-included/C-4-R2.wav", "pause":0, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"script-included/C-5-R1.wav", "pause":0, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"script-included/C-6-R2.wav", "pause":0, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"script-included/C-7-R1.wav", "pause":0, "restart":1},
+		{"actor":2, "expression":"speak", "sound":"script-included/C-8-R2.wav", "pause":0, "restart":0},
+		{"actor":1, "expression":"bounce", "sound":"script-included/C-9-R1.wav", "pause":0, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"script-included/C-10-R2.wav", "pause":0, "restart":0},
+		{"actor":1, "expression":"bounce", "sound":"script-included/C-11-R1.wav", "pause":0, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"script-included/C-12-R2.wav", "pause":1, "restart":0},
+				{"actor":1, "expression":"bounce", "sound":"", "pause":2, "restart":0},
+				{"actor":2, "expression":"bounce", "sound":"", "pause":2, "restart":0},
+				{"actor":2, "expression":"bounce", "sound":"", "pause":1, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"script-included/C-13-R2.wav", "pause":0, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"script-included/C-13-R1.wav", "pause":3, "restart":0},
+		{"actor":2, "expression":"bounce", "sound":"", "pause":2, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"script-included/C-14-R1.wav", "pause":3, "restart":0},
+		{"actor":2, "expression":"bounce", "sound":"", "pause":2, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"script-included/C-15-R1.wav", "pause":0, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"script-included/C-17-R2.wav", "pause":0, "restart":0},
+		{"actor":1, "expression":"pan", "sound":80, "pause":0.5, "restart":0},
+		{"actor":2, "expression":"pan", "sound":90, "pause":0.5, "restart":0}
+	],
+	"NextScenes":[99]
+}
+]
+}
+
