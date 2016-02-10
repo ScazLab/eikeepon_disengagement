@@ -1,0 +1,158 @@
+{
+"NrScenes":11,
+"Strategies":[
+{
+	"StrategyName":"R1: WHY AREN'T THEY LISTENING TO US?",
+	"SceneActions":[
+		{"actor":1, "expression":"pan", "sound":70, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":120, "pause":0.5, "restart":0},
+		{"actor":1, "expression":"pan", "sound":170, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":20, "pause":0.5, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"dis-strategies/D1-R1.wav", "pause":1, "restart":0},
+		{"actor":1, "expression":"pan", "sound":150, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":30, "pause":1, "restart":0}
+		]	
+},
+{
+	"StrategyName":"R2: WHY AREN'T THEY LISTENING TO US?",
+	"SceneActions":[
+		{"actor":1, "expression":"pan", "sound":70, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":120, "pause":0.5, "restart":0},
+		{"actor":1, "expression":"pan", "sound":170, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":20, "pause":0.5, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"dis-strategies/D1-R2.wav", "pause":1, "restart":0},
+		{"actor":1, "expression":"pan", "sound":150, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":30, "pause":1, "restart":0}
+		]	
+},
+
+
+
+
+{
+	"StrategyName":"R1: LET'S START AGAIN",
+	"SceneActions":[
+		{"actor":1, "expression":"pan", "sound":70, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":120, "pause":0.5, "restart":0},
+		{"actor":1, "expression":"pan", "sound":170, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":20, "pause":0.5, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"dis-strategies/D4-R1.wav", "pause":0.5, "restart":0},
+		{"actor":1, "expression":"pan", "sound":150, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":30, "pause":1, "restart":0}
+		]	
+},
+{
+	"StrategyName":"R2: LET'S START AGAIN",
+	"SceneActions":[
+		{"actor":1, "expression":"pan", "sound":70, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":120, "pause":0.5, "restart":0},
+		{"actor":1, "expression":"pan", "sound":170, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":20, "pause":0.5, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"dis-strategies/D4-R2.wav", "pause":0.5, "restart":0},
+		{"actor":1, "expression":"pan", "sound":150, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":30, "pause":1, "restart":0}
+		]	
+},
+
+
+
+{
+	"StrategyName":"R1: CAN'T HEAR YOU LEO! ",
+	"SceneActions":[
+		{"actor":1, "expression":"pan", "sound":70, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":120, "pause":0.5, "restart":0},
+		{"actor":1, "expression":"pan", "sound":170, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":20, "pause":0.5, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"dis-strategies/D8-R1.wav", "pause":0.5, "restart":0},
+		{"actor":1, "expression":"pan", "sound":150, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":30, "pause":1, "restart":0}
+		]	
+},
+{
+	"StrategyName":"R2: CAN'T HEAR YOU BERRY! ",
+	"SceneActions":[
+		{"actor":1, "expression":"pan", "sound":70, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":120, "pause":0.5, "restart":0},
+		{"actor":1, "expression":"pan", "sound":170, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":20, "pause":0.5, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"dis-strategies/D9-R2.wav", "pause":0.5, "restart":0},
+		{"actor":1, "expression":"pan", "sound":150, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":30, "pause":1, "restart":0}
+		]	
+},
+
+
+
+
+{
+	"StrategyName":"R1: DO THEY SEEM DISTRACTED TO YOU? / YEAH A BIT ",
+	"SceneActions":[
+		{"actor":1, "expression":"pan", "sound":70, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":120, "pause":0.5, "restart":0},
+		{"actor":1, "expression":"pan", "sound":170, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":20, "pause":0.5, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"dis-strategies/D10-R1.wav", "pause":0.5, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"dis-strategies/D11-R2.wav", "pause":0.5, "restart":0},
+		{"actor":1, "expression":"pan", "sound":150, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":30, "pause":1, "restart":0}
+		]	
+},
+{
+	"StrategyName":"R2: DO THEY SEEM DISTRACTED TO YOU? / YEAH A BIT ",
+	"SceneActions":[
+		{"actor":1, "expression":"pan", "sound":70, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":120, "pause":0.5, "restart":0},
+		{"actor":1, "expression":"pan", "sound":170, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":20, "pause":0.5, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"dis-strategies/D10-R2.wav", "pause":0.5, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"dis-strategies/D11-R1.wav", "pause":0.5, "restart":0},
+		{"actor":1, "expression":"pan", "sound":150, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":30, "pause":1, "restart":0}
+		]	
+},
+
+
+
+
+{
+	"StrategyName":"R1:  ARE THEY PAYING ATTENTION TO US?  ",
+	"SceneActions":[
+		{"actor":1, "expression":"pan", "sound":70, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":120, "pause":0.5, "restart":0},
+		{"actor":1, "expression":"pan", "sound":170, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":20, "pause":0.5, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"dis-strategies/D12-R1.wav", "pause":0.5, "restart":0},
+		{"actor":1, "expression":"pan", "sound":150, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":30, "pause":1, "restart":0}
+		]	
+},
+{
+	"StrategyName":"R2:  ARE THEY PAYING ATTENTION TO US?   ",
+	"SceneActions":[
+		{"actor":1, "expression":"pan", "sound":70, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":120, "pause":0.5, "restart":0},
+		{"actor":1, "expression":"pan", "sound":170, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":20, "pause":0.5, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"dis-strategies/D12-R2.wav", "pause":0.5, "restart":0},
+		{"actor":1, "expression":"pan", "sound":150, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":30, "pause":1, "restart":0}
+		]	
+},
+
+
+{
+	"StrategyName":"R1:  LET'S GO OVER THE LAST PART AGAIN  ",
+	"SceneActions":[
+		{"actor":1, "expression":"pan", "sound":70, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":120, "pause":0.5, "restart":0},
+		{"actor":1, "expression":"pan", "sound":170, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":20, "pause":0.5, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"dis-strategies/D13-R1.wav", "pause":0.5, "restart":0},
+		{"actor":1, "expression":"pan", "sound":150, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":30, "pause":1, "restart":0}
+		]	
+}
+
+
+]
+}

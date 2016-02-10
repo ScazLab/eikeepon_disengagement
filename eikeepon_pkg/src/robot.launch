@@ -1,0 +1,5 @@
+<launch>
+	<arg name="ID" default="0"/>
+	<arg name="port" default="ACM0"/>	
+	<node name="arduino$(arg ID)" pkg="eikeepon_pkg" type="ArduinoRemoteController.py" output="screen" respawn="false" args="$(arg port) $(arg ID)"/>
+</launch>

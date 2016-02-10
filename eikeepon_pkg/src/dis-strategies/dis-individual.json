@@ -1,0 +1,169 @@
+{
+"NrScenes":17,
+"Strategies":[
+
+{
+	"StrategyName":"R1: look at disengaged kid",
+	"SceneActions":[
+		{"actor":1, "expression":"lookat", "sound":"disengaged", "pause":2, "restart":0}
+		]	
+},
+
+{
+	"StrategyName":"R2: look at disengaged kid",
+	"SceneActions":[
+		{"actor":2, "expression":"lookat", "sound":"disengaged", "pause":2, "restart":0}
+		]	
+},
+
+{
+	"StrategyName":"R1 and R2 look at disengaged kid",
+	"SceneActions":[
+		{"actor":1, "expression":"lookat", "sound":"disengaged", "pause":0, "restart":0},
+		{"actor":2, "expression":"lookat", "sound":"disengaged", "pause":2, "restart":0}
+		]	
+},
+
+{
+	"StrategyName":"R1: hey, can you get them to pay attention? only R1 looks",
+	"SceneActions":[
+		{"actor":1, "expression":"lookat", "sound":"engaged", "pause":1, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"dis-strategies/D3-R1.wav", "pause":0.5, "restart":0},
+		{"actor":1, "expression":"pan", "sound":150, "pause":0.5, "restart":0}
+		]	
+},
+
+{
+	"StrategyName":"R1: hey, can you get them to pay attention? both R1 and R2 look",
+	"SceneActions":[
+		{"actor":1, "expression":"lookat", "sound":"engaged", "pause":0, "restart":0},
+		{"actor":2, "expression":"lookat", "sound":"engaged", "pause":1, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"dis-strategies/D3-R1.wav", "pause":1, "restart":0},
+		{"actor":1, "expression":"pan", "sound":150, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":30, "pause":0.5, "restart":0}
+		]	
+},
+
+{
+	"StrategyName":"R1: TRYING TO WORK HERE! only R1 looks",
+	"SceneActions":[
+		{"actor":1, "expression":"lookat", "sound":"disengaged", "pause":0.8, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"dis-strategies/D7-R1.wav", "pause":0.5, "restart":0},
+		{"actor":1, "expression":"pan", "sound":150, "pause":0.5, "restart":0}
+		]	
+},
+
+{
+	"StrategyName":"R1: TRYING TO WORK HERE! both R1 and R2 look",
+	"SceneActions":[
+		{"actor":1, "expression":"lookat", "sound":"disengaged", "pause":0, "restart":0},
+		{"actor":2, "expression":"lookat", "sound":"disengaged", "pause":1, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"dis-strategies/D7-R1.wav", "pause":1, "restart":0},
+		{"actor":1, "expression":"pan", "sound":150, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":30, "pause":0.5, "restart":0}
+		]	
+},
+
+
+
+
+{
+	"StrategyName":"R1: HEY! only R1 looks",
+	"SceneActions":[
+		{"actor":1, "expression":"lookat", "sound":"disengaged", "pause":0.8, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"dis-strategies/D14-R1.wav", "pause":1, "restart":0},
+		{"actor":1, "expression":"pan", "sound":150, "pause":0.5, "restart":0}
+		]	
+},
+
+{
+	"StrategyName":"R1: HEY! both R1 and R2 look",
+	"SceneActions":[
+		{"actor":1, "expression":"lookat", "sound":"disengaged", "pause":0, "restart":0},
+		{"actor":2, "expression":"lookat", "sound":"disengaged", "pause":1, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"dis-strategies/D14-R1.wav", "pause":1.5, "restart":0},
+		{"actor":1, "expression":"pan", "sound":150, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":30, "pause":0.5, "restart":0}
+		]	
+},
+
+
+
+{
+	"StrategyName":"R1: HELLO! only R1 looks",
+	"SceneActions":[
+		{"actor":1, "expression":"lookat", "sound":"disengaged", "pause":0.8, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"dis-strategies/D15-R1.wav", "pause":1, "restart":0},
+		{"actor":1, "expression":"pan", "sound":150, "pause":0.5, "restart":0}
+		]	
+},
+{
+	"StrategyName":"R2: HELLO!  only R2 looks",
+	"SceneActions":[
+		{"actor":2, "expression":"lookat", "sound":"disengaged", "pause":1, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"dis-strategies/D15-R2.wav", "pause":1, "restart":0},
+		{"actor":2, "expression":"pan", "sound":30, "pause":0.5, "restart":0}
+		]	
+},
+{
+	"StrategyName":"R1: HELLO! both R1 and R2 look",
+	"SceneActions":[
+		{"actor":1, "expression":"lookat", "sound":"disengaged", "pause":0, "restart":0},
+		{"actor":2, "expression":"lookat", "sound":"disengaged", "pause":1, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"dis-strategies/D15-R1.wav", "pause":1.5, "restart":0},
+		{"actor":1, "expression":"pan", "sound":150, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":30, "pause":0.5, "restart":0}
+		]	
+},
+{
+	"StrategyName":"R2: HELLO!  both R1 and R2 look",
+	"SceneActions":[
+		{"actor":1, "expression":"lookat", "sound":"disengaged", "pause":0, "restart":0},
+		{"actor":2, "expression":"lookat", "sound":"disengaged", "pause":1, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"dis-strategies/D15-R2.wav", "pause":1.5, "restart":0},
+		{"actor":1, "expression":"pan", "sound":150, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":30, "pause":0.5, "restart":0}
+		]	
+},
+
+{
+	"StrategyName":"R1: WHY AREN'T YOU LISTENING?  both R1 and R2 look",
+	"SceneActions":[
+		{"actor":1, "expression":"lookat", "sound":"disengaged", "pause":0, "restart":0},
+		{"actor":2, "expression":"lookat", "sound":"disengaged", "pause":1, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"dis-strategies/D18-R1.wav", "pause":1.5, "restart":0},
+		{"actor":1, "expression":"pan", "sound":150, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":30, "pause":0.5, "restart":0}
+		]	
+},
+
+
+{
+	"StrategyName":"R1: CAN YOU PAY ATTENTION?   only R1 looks",
+	"SceneActions":[
+		{"actor":1, "expression":"lookat", "sound":"disengaged", "pause":0.8, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"dis-strategies/D19-R1.wav", "pause":1, "restart":0},
+		{"actor":1, "expression":"pan", "sound":150, "pause":0.5, "restart":0}
+		]	
+},
+{
+	"StrategyName":"R2: CAN YOU PAY ATTENTION? only R2 looks",
+	"SceneActions":[
+		{"actor":2, "expression":"lookat", "sound":"disengaged", "pause":1, "restart":0},
+		{"actor":2, "expression":"speak", "sound":"dis-strategies/D19-R2.wav", "pause":1, "restart":0},
+		{"actor":2, "expression":"pan", "sound":30, "pause":0.5, "restart":0}
+		]	
+},
+{
+	"StrategyName":"R1: CAN YOU PAY ATTENTION?  both R1 and R2 look",
+	"SceneActions":[
+		{"actor":1, "expression":"lookat", "sound":"disengaged", "pause":0, "restart":0},
+		{"actor":2, "expression":"lookat", "sound":"disengaged", "pause":1, "restart":0},
+		{"actor":1, "expression":"speak", "sound":"dis-strategies/D19-R1.wav", "pause":1.5, "restart":0},
+		{"actor":1, "expression":"pan", "sound":150, "pause":0, "restart":0},
+		{"actor":2, "expression":"pan", "sound":30, "pause":0.5, "restart":0}
+		]	
+}
+
+]
+}

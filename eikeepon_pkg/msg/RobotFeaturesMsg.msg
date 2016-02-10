@@ -1,0 +1,2 @@
+int8 robotTalking
+int8 robotBouncing

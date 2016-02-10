@@ -1,0 +1,3 @@
+string feats_child_left
+string feats_child_middle
+string feats_child_right

@@ -1,0 +1,6 @@
+<launch>
+
+	<node name="KinectParser" pkg="eikeepon_pkg" type="KinectParser.py" output="screen" respawn="true"/>
+	<node name="Disengagement" pkg="eikeepon_pkg" type="Disengagement.py" output="screen" respawn="true"/>
+	
+</launch>

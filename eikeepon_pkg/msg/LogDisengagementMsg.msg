@@ -1,0 +1,7 @@
+int32 time
+int8 pred_child_left
+int8 pred_child_middle
+int8 pred_child_right
+string feats_child_left
+string feats_child_middle
+string feats_child_right

@@ -1,0 +1,112 @@
+{
+"StoryName":"Frustration",
+"NrScenes":4,
+"Scenes":[
+{
+	"SceneID":1,
+	"SceneName":"Intro",
+	"SceneDescription":"to be used in tablet app",
+	"SceneActions":[
+		{"actor":2, "expression":"speak", "sound":"script-frustration/I-1-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/I-2-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/I-3-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/I-4-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/I-5-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/I-6-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/I-7-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/I-8-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/I-9-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/I-10-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/I-11-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/I-12-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/I-13-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/I-14-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/I-15-R2.wav", "pause":1},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/I-16-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/I-17-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/I-18-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/I-19-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/I-20-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/I-21-R1.wav", "pause":0}
+	],
+	"NextScenes":[2,3,4]
+},
+{
+	"SceneID":2,
+	"SceneName":"choiceA",
+	"SceneDescription":"ask Leo to read the story",
+	"SceneActions":[
+		{"actor":2, "expression":"speak", "sound":"script-frustration/A-1-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/A-2-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/A-3-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/A-4-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/A-5-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/A-6-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/A-7-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/A-8-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/A-9-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/A-10-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/A-11-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/A-12-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/A-13-R2.wav", "pause":0}
+	],
+	"NextScenes":[99]
+},
+{
+	"SceneID":3,
+	"SceneName":"choiceB",
+	"SceneDescription":"wait for the teacher",
+	"SceneActions":[
+		{"actor":2, "expression":"speak", "sound":"script-frustration/B-1-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/B-2-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/B-3-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/B-4-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/B-5-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/B-6-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/B-7-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/B-8-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/B-9-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/B-10-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/B-11-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/B-12-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/B-13-R2.wav", "pause":0}
+	],
+	"NextScenes":[99]
+},
+{
+	"SceneID":99,
+	"SceneName":"Final Scene",
+	"SceneDescription":"final scene ID should always be 99!",
+	"SceneActions":[
+		{"actor":"1", "expression":"happy", "sound":"intro.wav", "pause":"0"}
+	],
+	"NextScenes":[99]
+},
+{
+	"SceneID":4,
+	"SceneName":"choiceC",
+	"SceneDescription":"to be used in tablet app",
+	"SceneActions":[
+		{"actor":2, "expression":"speak", "sound":"script-frustration/C-1-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/C-2-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/C-3-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/C-4-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/C-5-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/C-6-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/C-7-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/C-8-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/C-9-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/C-10-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/C-11-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/C-12-R1.wav", "pause":3},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/C-13-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/C-14-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/C-15-R1.wav", "pause":0},
+		{"actor":2, "expression":"speak", "sound":"script-frustration/C-16-R2.wav", "pause":0},
+		{"actor":1, "expression":"speak", "sound":"script-frustration/C-17-R1.wav", "pause":0}
+	],
+	"NextScenes":[99]
+}
+]
+}
+

@@ -1,0 +1,13 @@
+<launch>
+	<arg name="ID_R1" default="1"/>
+	<arg name="ID_R2" default="2"/>
+	<arg name="port_R1" default="ACM0"/>	
+	<arg name="port_R2" default="ACM1"/>
+	
+	<node name="arduino$(arg ID_R1)" pkg="eikeepon_pkg" type="KeeponAnimation.py" output="screen" respawn="false" args="$(arg port_R1) $(arg ID_R1)"/>
+	<node name="arduino$(arg ID_R2)" pkg="eikeepon_pkg" type="KeeponAnimation.py" output="screen" respawn="false" args="$(arg port_R2) $(arg ID_R2)"/>
+	<!--node name="StoryController" pkg="eikeepon_pkg" type="StoryController.py" output="screen" respawn="true"/-->
+	<!--node pkg="rosbag" type="record" name="record" output="screen"
+    args="-O /home/iolanda/kinect_tests/launchBags /ei_log_data"/--> 
+    
+</launch>

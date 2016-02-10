@@ -1,0 +1,5 @@
+<launch>
+	<!--<include file="robot.launch" />-->
+	<node name="controller" pkg="eikeepon_pkg" type="Controller.py" output="screen" respawn="true"/>
+	<node name="arduino" pkg="eikeepon_pkg" type="ArduinoRemoteController.py" respawn="true"/>
+</launch>
